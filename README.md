@@ -1,4 +1,4 @@
-## discord-auto-gen-cmd 
+#discord-auto-gen-cmd 
 This Discord bot automates command generation and streamlines server management. It helps keep commands organized and reduces manual effort.
 
 ## Requirements
