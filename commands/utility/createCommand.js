@@ -15,11 +15,11 @@ module.exports = {
     async execute(interaction) {
         const cmd = interaction.options.getString('cmd') ?? 'No command provided';
         const text = await getGroqChatCompletion(cmd);
-        
+        await interaction.deferReply();
         // Build file path in commands/utility folder
         const filePath = path.join(__dirname, `cmd_${Date.now()}.js`);
         fs.writeFileSync(filePath, text);
 
-        await interaction.reply(text);
+        await interaction.editReply(text);
     },
 };
